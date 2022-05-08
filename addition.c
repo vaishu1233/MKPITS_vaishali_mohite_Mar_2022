@@ -1,17 +1,18 @@
 #include<stdio.h>
 #include<conio.h>
-void add();
 void main()
 {
-   add();
+fun1();
 }
-void add()
+void fun()
 {
-   int n1, n2, sum;
-   printf("enter any two num:");
-   scanf("%d",&n1);
-   printf(" enter any num:");
-   scanf("%d",&n2);
-   sum=n1=n2;
-   printf("sum= %d", sum);
+int a=2,b=3;
+add(a,b);
+}
+void add(int x, int y)
+{
+int r;
+r=x*y;
+printf("%d",r);
+getch();
 }
