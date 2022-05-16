@@ -1,38 +1,53 @@
 #include <stdio.h>
-int is_Array_Sorted(int [], int);
 
-int main()
-{
-  int a[100], n, c;
+void bubbleSortExample(int arr[], int num){
 
-  printf("Enter number of elements\n");
-  scanf("%d", &n);
+    int x, y, temp;
 
-  printf("Enter %d integers\n", n);
+    for(x = 0; x < num - 1; x++){
 
-  for (c = 0; c < n; c++)
-    scanf("%d", &a[c]);
+        for(y = 0; y < num - x - 1; y++){
 
-  if (is_Array_Sorted(a, n))
-    printf("The array is sorted.\n");
-  else
-    printf("The array isn't sorted.\n");
+            if(arr[y] > arr[y + 1]){
 
-  return 0;
+                temp = arr[y];
+
+                arr[y] = arr[y + 1];
+
+                arr[y + 1] = temp;
+
+            }
+
+        }
+
+    }
+
 }
 
-int is_Array_Sorted(int a[], int n) {
-  int c, d, sorted = 1, t;
+int main(){
 
-  for (c = 0 ; c < n - 1; c++) {
-    for (d = 0 ; d < n - c - 1; d++) {
-      if (a[d] > a[d+1]) {
-        t = a[d];
-        a[d] = a[d+1];
-        a[d+1] = t;
-        return 0;
-      }
+    int arr[50], n, x;
+
+    printf("Please Enter the Number of Elements you want in the array: ");
+
+    scanf("%d", &n);
+
+    printf("Please Enter the Value of Elements: ");
+
+    for(x = 0; x < n; x++)
+
+        scanf("%d", &arr[x]);
+
+    bubbleSortExample(arr, n);
+
+    printf("Array after implementing bubble sort: ");
+
+    for(x = 0; x < n; x++){
+
+        printf("%d  ", arr[x]);
+
     }
-  }
-  return 1;
+
+    return 0;
+
 }
