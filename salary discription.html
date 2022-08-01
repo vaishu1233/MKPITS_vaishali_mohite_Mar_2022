@@ -1,0 +1,24 @@
+   <script>
+   function display()
+   {
+     var i=document.getElementById("t1").value;
+	     var j=document.getElementById("t2").value;
+		     var k=document.getElementById("t3").value;
+		emp={id:i,name:j,salary:k};
+	//document.write(emp.id + emp.name + EMP.salary);
+	document.getElementById("s1").innertext=emp.id;
+	document.getElementById("s2").innertext=emp.name;
+	document.getElementById("s3").innertext=emp.salary;
+	}
+	 </script>
+
+<form>
+enter id : <input type=text id="t1" /><br>
+enter name : <input type=text name="t2" /><br>
+enter salary : <input type=text salary="t3" /><br>
+<input type=button onclick="display();" value=show />
+employee id : <span id="s1" ></span> <br>
+employee name : <span name="s1" ></span> <br>
+employee salary : <span salary="s1" ></span> <br>
+
+</form>
